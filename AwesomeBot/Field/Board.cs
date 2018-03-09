@@ -62,7 +62,7 @@ namespace AwesomeBot.Field
         }
 
         private bool IsValidPoint(Point point) 
-            => ((point.X >= 0 && point.X < Width) ||  (point.Y >= 0 && point.Y < Height)) &&
+            => ((point.X >= 0 && point.X < Width) &&  (point.Y >= 0 && point.Y < Height)) &&
                                                   FieldPositions[point.X][point.Y].Free();
 
         private void ClearField()
