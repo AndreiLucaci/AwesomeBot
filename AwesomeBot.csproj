@@ -42,6 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bot\BotParser.cs" />
+    <Compile Include="Bot\BotState.cs" />
+    <Compile Include="Bot\LightBot.cs" />
+    <Compile Include="Field\Field.cs" />
+    <Compile Include="Field\Point.cs" />
+    <Compile Include="Move\Move.cs" />
+    <Compile Include="Move\MoveType.cs" />
+    <Compile Include="Player\Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
