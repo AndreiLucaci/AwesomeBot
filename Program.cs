@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LightRidersBot.Bot;
 
-namespace AwesomeBot
+namespace LightRidersBot
 {
     class Program
     {
         static void Main(string[] args)
         {
+            BotParser parser = new BotParser(new LightBot());
+            parser.Run();
         }
     }
 }
