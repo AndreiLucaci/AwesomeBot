@@ -1,4 +1,4 @@
-﻿using LightRidersBot.Bot;
+﻿using AwesomeBot.Bot;
 
 namespace LightRidersBot
 {
@@ -6,7 +6,7 @@ namespace LightRidersBot
     {
         static void Main(string[] args)
         {
-            BotParser parser = new BotParser(new LightBot());
+            BotParser parser = new BotParser(new AwesomeBot.Bot.AwesomeBot());
             parser.Run();
         }
     }

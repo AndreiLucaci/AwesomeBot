@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeBot", "AwesomeBot.csproj", "{43CF08A1-6960-4F00-A732-E9232F7A312F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeBot.Tests", "..\AwesomeBot.Tests\AwesomeBot.Tests.csproj", "{30785B13-B91A-49B8-B8EF-76DD698659EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{43CF08A1-6960-4F00-A732-E9232F7A312F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43CF08A1-6960-4F00-A732-E9232F7A312F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43CF08A1-6960-4F00-A732-E9232F7A312F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30785B13-B91A-49B8-B8EF-76DD698659EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30785B13-B91A-49B8-B8EF-76DD698659EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30785B13-B91A-49B8-B8EF-76DD698659EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30785B13-B91A-49B8-B8EF-76DD698659EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

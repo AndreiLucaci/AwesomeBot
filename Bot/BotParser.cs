@@ -1,13 +1,13 @@
 ﻿using System;
-using LightRidersBot.Move;
+using AwesomeBot.Move;
 
-namespace LightRidersBot.Bot
+namespace AwesomeBot.Bot
 {
     public class BotParser
     {
-        private readonly LightBot _bot;
+        private readonly AwesomeBot _bot;
         private readonly BotState _currentState;
-        public BotParser(LightBot bot)
+        public BotParser(AwesomeBot bot)
         {
             _bot = bot;
             _currentState = new BotState();
@@ -33,7 +33,7 @@ namespace LightRidersBot.Bot
                     case "action":
                         if (parts[1].Equals("move"))
                         {
-                            var move = _bot.DoMove(_currentState);
+                            var move = _bot.MoveBot(_currentState);
                             Console.WriteLine(move?.ToString() ?? MoveType.Pass.ToString());
                         }
                         break;
@@ -61,20 +61,20 @@ namespace LightRidersBot.Bot
                     case "player_names":
                         var playerNames = value.Split(',');
                         foreach (var playerName in playerNames)
-                            _currentState.Players.Add(playerName, new Player.Player(playerName));
+                            _currentState.Players.Add(playerName, new LightRidersBot.Player.Player(playerName));
                         break;
                     case "your_bot":
                         _currentState.MyName = value;
                         break;
                     case "your_botid":
                         int myId = int.Parse(value);
-                        _currentState.Field.MyId = myId;
+                        _currentState.Board.MyId = myId;
                         break;
                     case "field_width":
-                        _currentState.Field.Width = int.Parse(value);
+                        _currentState.Board.Width = int.Parse(value);
                         break;
                     case "field_height":
-                        _currentState.Field.Height = int.Parse(value);
+                        _currentState.Board.Height = int.Parse(value);
                         break;
                     case "max_rounds":
                         _currentState.MaxRounds = int.Parse(value);
@@ -101,8 +101,8 @@ namespace LightRidersBot.Bot
                         _currentState.RoundNumber = int.Parse(value);
                         break;
                     case "field":
-                        _currentState.Field.InitField();
-                        _currentState.Field.ParseFromString(value);
+                        _currentState.Board.InitField();
+                        _currentState.Board.ParseFromString(value);
                         break;
                     default:
                         Console.Error.WriteLine($"Cannot parse game data input with key '{key}'");

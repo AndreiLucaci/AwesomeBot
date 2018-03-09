@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace LightRidersBot.Move
+namespace AwesomeBot.Move
 {
     public enum MoveType
     {
+        Pass,
         Up,
         Down,
         Left,
-        Right,
-        Pass
+        Right
     }
 
     public static class MoveHelper
@@ -17,7 +17,8 @@ namespace LightRidersBot.Move
         public static MoveType LastMove { get; private set; }
         public static MoveType GetRandomExcluding(List<MoveType> moveTypes)
         {
-            List<MoveType> valuesExcluding = new List<MoveType> { MoveType.Down,MoveType.Left, MoveType.Pass, MoveType.Right, MoveType.Up};
+            List<MoveType> valuesExcluding =
+                new List<MoveType> {MoveType.Down, MoveType.Left, MoveType.Pass, MoveType.Right, MoveType.Up};
 
             foreach (var moveType in moveTypes)
                 valuesExcluding.Remove(moveType);

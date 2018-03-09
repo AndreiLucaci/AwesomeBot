@@ -1,13 +1,13 @@
-﻿namespace LightRidersBot.Field
+﻿namespace AwesomeBot.Field
 {
     public class Point
     {
-        private int _x;
-        private int _y;
+        public int X;
+        public int Y;
         public Point(int x, int y)
         {
-            _x = x;
-            _y = y;
+            X = x;
+            Y = y;
         }
     }
 }

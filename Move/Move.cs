@@ -1,4 +1,4 @@
-﻿namespace LightRidersBot.Move
+﻿namespace AwesomeBot.Move
 {
     public class Move
     {

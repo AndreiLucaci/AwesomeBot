@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using AwesomeBot.Field;
 
-namespace LightRidersBot.Bot
+namespace AwesomeBot.Bot
 {
     public class BotState
     {
@@ -11,13 +12,13 @@ namespace LightRidersBot.Bot
         public int Timebank { get; set; }
         public string MyName { get; set; }
 
-        public Dictionary<string, Player.Player> Players { get; set; }
-        public Field.Field Field { get; set; }
+        public Dictionary<string, LightRidersBot.Player.Player> Players { get; set; }
+        public Board Board { get; set; }
 
         public BotState()
         {
-            Field = new Field.Field();
-            Players = new Dictionary<string, Player.Player>();
+            Board = new Board();
+            Players = new Dictionary<string, LightRidersBot.Player.Player>();
         }
     }
 }
